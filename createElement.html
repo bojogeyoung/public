@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM을 공부합시다</h1>
+        <a href="#" onclick="addContents(); this.onclick ='';">더 보기</a>
+        <div id="info"></div>
+
+    </div>
+    
+    
+    
+    <script>
+        // let newImg = document.createElement("img"); //요소 노드 만들기
+       
+        // let srcNoe = document.createAttribute("src"); // 속성 노드 만들기
+        // let altNoe = document.createAtrribute("alt") ;
+        // srcNode.value = "images/apple.png"; //src 속성값 지정
+        // altNode.value = "사과 이미지";
+    
+        // newImg.setAttributeNode("srcNode");
+        // newImg.setAttributeNode("altNode");
+        // //////////////////////여기까진 img요소만 만들어 놓은 상태. 웹문서의 DOM에 추가해야 화면에 표시됨
+        // document.getElementById("info").appendChild(newImg);        
+
+        function addContents(){
+
+            let newP = document.crateElement("p");
+            let txtNode = document.createTextNode("DOM은 document object model의 줄임말");
+            newp.appendChild(txtNode);
+
+
+
+            let newImg = document.createElement("img");
+            let srcNode = document.createElement("src");
+            let altNode = document.createAttribute("alt");
+            srcNode.value = "images/apple.png";
+            altNode.value = "사과이미지";
+            newImg.setAttributeNoe("srcNode");
+            newImg.setAttributeNode("altNode");
+
+            document.getElementById("info").appendChild("newP");
+            document.getElementById("info").appendChild("newImg");
+
+        }
+
+
+
+
+    </script>
+    
+
+</body>
+</html>
